@@ -1,0 +1,50 @@
+import csv
+import urllib.request
+import socket
+
+def check_url_status(url):
+    if url.lower().endswith('.pdf'):
+        return 'PDF'
+    
+    try:
+        request = urllib.request.Request(url, method='HEAD')
+        response = urllib.request.urlopen(request, timeout=10)
+        
+        if response.getcode() == 200:
+            return 'Passed'
+        elif response.getcode() == 404:
+            return 'Failed'
+        else:
+            return 'Failed'
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return 'Failed'
+        else:
+            return 'Failed'
+    except (urllib.error.URLError, socket.timeout):
+        return 'Failed_Connection'
+    except Exception:
+        return 'Failed_RequestEX'
+
+def main():
+    input_csv_file_path = '/Users/smit/Desktop/WebScrapper/IDSLA Web Content/Content Validation/Publication Links.csv'  # Replace with your input CSV file path
+    output_csv_file_path = '/Users/smit/Desktop/WebScrapper/IDSLA Web Content/Content Validation/Publication Links_Results.csv'  # Output CSV file path
+     
+    with open(input_csv_file_path, 'r') as infile, open(output_csv_file_path, 'w', newline='') as outfile:
+        reader = csv.reader(infile)
+        writer = csv.writer(outfile)
+        
+        header = next(reader)
+        header.append('Status')
+        writer.writerow(header)
+        
+        for row in reader:
+            if len(row) > 0:  # Check if the row has at least one element
+                url = row[0]  # Assuming the URL is in the first column
+                status = check_url_status(url)
+                row.append(status)
+                writer.writerow(row)
+                print(f'{url}: {status}')
+
+if __name__ == '__main__':
+    main()

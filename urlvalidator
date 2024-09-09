@@ -48,3 +48,26 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+# # $keywords_lists = array(
+#         'data_mining' => array('data', 'mining', 'analytics', 'big data', 'data analysis', 'data visualization', 'dimensionality reduction', 'intelligent systems'),
+#         'privacy' => array('privacy', 'security', 'confidentiality', 'encryption', 'data privacy', 'database security', 'privacy protections', 'information security'),
+#         'ai_ml' => array('artificial intelligence', 'machine learning', 'deep learning', 'neural networks', 'support vector machine', 'classification', 'predictive models'),
+#         'cyber-security' => array('security', 'cyber security', 'database security', 'threat modeling', 'backdoor attack', 'data poisoning', 'information security', 'privacy protections'),
+#         'data_management' => array('data management', 'database management', 'information systems', 'database engines', 'distributed databases', 'data management systems'),
+#         'education' => array('education', 'learning', 'training', 'knowledge engineering', 'academic research', 'course materials'),
+#         'fairness/bias' => array('fairness', 'bias', 'algorithmic bias', 'ethics in AI', 'fairness in machine learning', 'bias mitigation'),
+#     );
+
+#     // Define your taxonomy term slugs
+#     $taxonomy_terms = array(
+#         'data_mining' => 'data-mining',  
+#         'privacy' => 'privacy',      
+#         'ai_ml' => 'ai-ml',
+#         'cyber-security' => 'cyber-security',
+#         'data_management' => 'data-management',
+#         'education' => 'education',
+#         'fairness/bias' => 'fairness-bias',
+#     );

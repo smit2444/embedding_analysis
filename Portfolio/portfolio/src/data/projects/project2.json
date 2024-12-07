@@ -1,9 +1,0 @@
-{
-    "id": "project2",
-    "title": "Project Two",
-    "description": "<p>This is a <strong>detailed description</strong> of project one.</p><ul><li>Feature 1</li><li>Feature 2</li></ul>",
-    "skills": ["React", "Node.js"],
-    "link": "/projects/project1",
-    "image": "path_to_project_image"
-  }
-  

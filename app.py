@@ -84,6 +84,12 @@ def main():
         st.warning("Output patterns file path cannot be empty.")
         return
 
+    reverse_option = st.sidebar.selectbox(
+        "Reverse the phrase?",
+        options=["No", "Yes"],  # Options for the user
+    )
+    reverse = True if reverse_option == "Yes" else False
+
     st.sidebar.subheader("File Selection")
     preloaded_dir = "./notes"
     preloaded_files = [
@@ -112,7 +118,7 @@ def main():
             st.success("Notes processed successfully!")
 
             current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
-            folder_name = f"{target_phrase.replace(' ', '-')}-{selected_model}-{window_size}-{current_time}"
+            folder_name = f"{target_phrase.replace(' ', '-')}-{selected_model}-{window_size}-Resevered-{reverse_option}-{current_time}"
             folder_path = os.path.join("output", folder_name)
 
             if not os.path.exists(folder_path):
@@ -150,7 +156,9 @@ def main():
                         patterns_file=mode_patterns_file,
                         tokenizer=tokenizer,
                         model=model,
-                        mode=mode
+                        mode=mode,
+                        phrase_size=target_phrase_length,
+                        reversed = reverse
                     )
 
                     df_embeddings.to_csv(embeddings_file, index=False)

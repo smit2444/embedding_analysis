@@ -1,0 +1,29 @@
+{
+    "Dr. Bridges documented normal": [
+        {
+            "original_window": "pedal pulses the last visit. His",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "pedal pulses last the visit. His",
+                    "pedal last the pulses visit. His"
+                ],
+                "hd_3": [
+                    "visit. pulses pedal last the His",
+                    "pedal visit. the pulses last His"
+                ],
+                "hd_4": [
+                    "pedal visit. last the pulses His",
+                    "last pedal the His visit. pulses"
+                ],
+                "hd_5": [
+                    "His last the visit. pulses pedal",
+                    "pulses pedal His the visit. last"
+                ],
+                "hd_6": [
+                    "His the pedal pulses last visit.",
+                    "His visit. pedal the last pulses"
+                ]
+            }
+        }
+    ]
+}

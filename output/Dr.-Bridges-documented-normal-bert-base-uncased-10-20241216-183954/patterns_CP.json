@@ -1,0 +1,29 @@
+{
+    "Dr. Bridges documented normal": [
+        {
+            "original_window": "This occurs only with heavy exertion.",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "This occurs exertion. with heavy only",
+                    "This only occurs with heavy exertion."
+                ],
+                "hd_3": [
+                    "This occurs heavy with exertion. only",
+                    "This occurs only exertion. with heavy"
+                ],
+                "hd_4": [
+                    "exertion. occurs only heavy with This",
+                    "only occurs heavy This with exertion."
+                ],
+                "hd_5": [
+                    "heavy only occurs with exertion. This",
+                    "heavy exertion. occurs with This only"
+                ],
+                "hd_6": [
+                    "only heavy exertion. This with occurs",
+                    "occurs This with heavy exertion. only"
+                ]
+            }
+        }
+    ]
+}

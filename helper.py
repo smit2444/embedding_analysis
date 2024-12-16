@@ -236,13 +236,7 @@ def load_patterns_per_entity(patterns_file='patterns.json'):
         patterns_dict = json.load(f)
     return patterns_dict
 
-def analyze_embeddings(df, target_word_position='end', target_word_index=0, patterns_file='patterns.json', tokenizer=None, model=None, mode='CPC'):
-    """
-    Analyze embeddings by comparing the original window to patterns with varying Hamming distances.
-    Uses saved patterns without regenerating them, focusing on the target word's embedding within the target phrase.
-
-    :param target_word_index: The index (position) of the target word in the target phrase to analyze.
-    """
+def analyze_embeddings(df, target_word_position='end', target_word_index=0, patterns_file='patterns.json', tokenizer=None, model=None, mode='CPC', phrase_size=4, reversed=False):
     embedding_analysis = []
 
     # Load patterns per entity from the saved file
@@ -279,24 +273,31 @@ def analyze_embeddings(df, target_word_position='end', target_word_index=0, patt
                 else:
                     print(f"Error: Target word index {target_word_index} is out of bounds for the target phrase: '{entity}'")
                     continue
-
-                for target_word_position_in_phrase in ['start', 'middle', 'end']:
-                    # print(f"\nAnalyzing target word at the {target_word_position_in_phrase} of the phrase")
-
-                    # Copy the original target phrase
+                # For adding target word at every possible position depending on the length of phrase
+                for target_word_position_in_phrase in range(phrase_size):
                     rearranged_entity_words = entity_words[:]
-
-                    # Move the target word to the specified position
-                    rearranged_entity_words.remove(target_word)  # Remove the target word from its original position
-                    if target_word_position_in_phrase == 'start':
-                        rearranged_entity_words.insert(0, target_word)
-                    elif target_word_position_in_phrase == 'middle':
-                        middle_index = len(rearranged_entity_words) // 2
-                        rearranged_entity_words.insert(middle_index, target_word)
-                    elif target_word_position_in_phrase == 'end':
-                        rearranged_entity_words.append(target_word)
-
+                    rearranged_entity_words.remove(target_word)  
+                    target_position = min(target_word_position_in_phrase, len(rearranged_entity_words))
+                    rearranged_entity_words.insert(target_position, target_word)
                     rearranged_entity = ' '.join(rearranged_entity_words)
+                # For adding the target word at 3 positions
+                # for target_word_position_in_phrase in ['start', 'middle', 'end']:
+                #     # print(f"\nAnalyzing target word at the {target_word_position_in_phrase} of the phrase")
+
+                #     # Copy the original target phrase
+                #     rearranged_entity_words = entity_words[:]
+
+                #     # Move the target word to the specified position
+                #     rearranged_entity_words.remove(target_word)  # Remove the target word from its original position
+                #     if target_word_position_in_phrase == 'start':
+                #         rearranged_entity_words.insert(0, target_word)
+                #     elif target_word_position_in_phrase == 'middle':
+                #         middle_index = len(rearranged_entity_words) // 2
+                #         rearranged_entity_words.insert(middle_index, target_word)
+                #     elif target_word_position_in_phrase == 'end':
+                #         rearranged_entity_words.append(target_word)
+
+                #     rearranged_entity = ' '.join(rearranged_entity_words)
                     # print(f"Rearranged target phrase: '{rearranged_entity}'")
 
                     # Add rearranged target phrase to the original window based on position
@@ -334,12 +335,18 @@ def analyze_embeddings(df, target_word_position='end', target_word_index=0, patt
 
                             adjusted_pattern = ' '.join(pattern_words)
 
+                            # Reversed condition, makes the entire adjusted_pattern to be reversed and will be compared with original window
+                            if reversed == True:
+                                adjusted_pattern = ' '.join(adjusted_pattern.split()[::-1])
+
                             # Get embedding for the rearranged target word in the adjusted pattern
                             # print(f"Computing embedding for the target word '{target_word}' in the adjusted pattern: '{adjusted_pattern}'")
                             pattern_embedding, pattern_tokens = get_target_word_embedding(adjusted_pattern, target_word=target_word, tokenizer=tokenizer, model=model)
 
                             # Compute cosine similarity between the original and rearranged pattern embeddings
-                            similarity = cosine_similarity([original_embedding], [pattern_embedding])[0][0]
+                            cs_similarity = cosine_similarity([original_embedding], [pattern_embedding])[0][0]
+                            euclidean_distance = np.linalg.norm(np.array(original_embedding) - np.array(pattern_embedding))
+
                             # print(f"Cosine similarity: {similarity}")
 
                             # Append result to the analysis list
@@ -348,96 +355,189 @@ def analyze_embeddings(df, target_word_position='end', target_word_index=0, patt
                                 'Original Phrase': ' '.join(entity_words),
                                 'Rearranged Phrase': rearranged_entity,
                                 'Target Word': target_word,
+                                'Reversed': reversed,
                                 'Position': target_word_position_in_phrase,
                                 'Hamming Distance': int(hd.split('_')[1]),
                                 'Context': original_window,
                                 'Original Window': modified_window, # modified_window is simply the original_window + target phrase that is obtained from the reference
                                 'Variation Window': adjusted_pattern,
-                                'Similarity': similarity,
+                                'Similarity': cs_similarity,
+                                'Euclidean Distance': euclidean_distance,
                                 'Token': original_tokens
                             })
     return pd.DataFrame(embedding_analysis)
 
+
+# def plot_combined_similarity_interactive(data_dict, mode):
+#     import plotly.graph_objects as go
+#     import plotly.express as px
+
+#     # Use a color scale for dynamic color assignment (e.g., 'Viridis', 'Rainbow', etc.)
+#     color_scale = px.colors.qualitative.Set1  # Can also use 'Viridis', 'Rainbow', etc.
+#     entity_styles = {
+#         'start': 'solid',
+#         'middle': 'dash',
+#         'end': 'dot'
+#     }
+   
+
+#     # Sort data_dict by numeric position order
+#     sorted_data = {k: data_dict[k] for k in sorted(data_dict.keys())}
+
+#     # Gather unique windows
+#     original_windows = set().union(*[df['Original Window'].unique() for df in sorted_data.values()])
+#     fig = go.Figure()
+
+#     # Iterate through windows
+#     for original_window in original_windows:
+#         # Iterate through sorted entity positions
+#         for entity_position, df in sorted_data.items():
+#             window_df = df[df['Original Window'] == original_window]
+#             if window_df.empty:
+#                 continue  
+#             # Get unique numeric positions (can be dynamic)
+#             unique_positions = sorted(window_df['Position'].unique())
+
+#             # Iterate through numeric target word positions (dynamic)
+#             for idx, target_word_position in enumerate(unique_positions):
+#                 position_group_df = window_df[window_df['Position'] == target_word_position]
+#                 if position_group_df.empty:
+#                     continue 
+                
+#                 # Map target word position to a color from the color scale
+#                 color = color_scale[idx % len(color_scale)]  # Ensure colors loop if more than available
+
+#                 # Aggregate statistics
+#                 similarity_stats = position_group_df.groupby('Hamming Distance')['Similarity'].mean().reset_index()
+                
+#                 # Add trace
+#                 fig.add_trace(go.Scatter(
+#                     x=similarity_stats['Hamming Distance'],
+#                     y=similarity_stats['Similarity'],
+#                     mode='lines+markers', 
+#                     name=f"Target Word Position: {target_word_position}, Phrase Position: {entity_position}",
+#                     line=dict(color=color, dash=entity_styles[entity_position]),  # You can customize line styles further if needed
+#                     marker=dict(
+#                         size=10,  
+#                         color=color,  
+#                         opacity=0.6  
+#                     ),
+#                     text=similarity_stats.apply(
+#                         lambda row: f"Original Window: {original_window}<br>Hamming Distance: {row['Hamming Distance']}<br>Similarity: {row['Similarity']:.2f}",
+#                         axis=1 
+#                     ),
+#                     hoverinfo='text'  
+#                 ))
+
+#     # Configure layout
+#     fig.update_layout(
+#         title=f"Combined Cosine Similarity by Hamming Distance\nOriginal Window: '{original_window}' - RPP: {mode}",
+#         xaxis_title="Hamming Distance",
+#         yaxis_title="Mean Cosine Similarity",
+#         yaxis=dict(
+#             range=[0, 1], 
+#             tickmode='array',  
+#             tickvals=[i / 10 for i in range(11)], 
+#             ticktext=[f"{i / 10:.1f}" for i in range(11)]  
+#         ),
+#         template="plotly_white",  
+#         hovermode='closest', 
+#         legend=dict(x=1.1, y=1),  
+#         margin=dict(r=150, t=100, b=50, l=50),  
+#     )
+
+#     # Update trace and interactivity settings
+#     fig.update_traces(marker=dict(size=12), selector=dict(mode='markers'))  
+#     fig.update_layout(
+#         clickmode='event+select',
+#     )
+
+#     fig.show()
+#     return fig
+
 def plot_combined_similarity_interactive(data_dict, mode):
     import plotly.graph_objects as go
+    import plotly.express as px
 
-    # Define order of positions
-    position_order = ['start', 'middle', 'end']
-    
-    # Style and color mappings
+    # Use a color scale for dynamic color assignment
+    color_scale = px.colors.qualitative.Set1
     entity_styles = {
         'start': 'solid',
         'middle': 'dash',
         'end': 'dot'
     }
-    position_colors = {
-        'start': 'green',
-        'middle': 'orange',
-        'end': 'blue'
-    }
-    
-    # Sort data_dict by position order
-    sorted_data = {k: data_dict[k] for k in position_order if k in data_dict}
-    
+
+    # Sort data_dict by numeric position order
+    sorted_data = {k: data_dict[k] for k in sorted(data_dict.keys())}
+
     # Gather unique windows
     original_windows = set().union(*[df['Original Window'].unique() for df in sorted_data.values()])
     fig = go.Figure()
-    
+
     # Iterate through windows
     for original_window in original_windows:
         # Iterate through sorted entity positions
         for entity_position, df in sorted_data.items():
             window_df = df[df['Original Window'] == original_window]
             if window_df.empty:
-                continue  
-            # Iterate through target word positions
-            for target_word_position, color in position_colors.items():
+                continue
+            # Get unique numeric positions
+            unique_positions = sorted(window_df['Position'].unique())
+
+            # Iterate through numeric target word positions
+            for idx, target_word_position in enumerate(unique_positions):
                 position_group_df = window_df[window_df['Position'] == target_word_position]
                 if position_group_df.empty:
-                    continue 
+                    continue
+
+                # Map target word position to a color from the color scale
+                color = color_scale[idx % len(color_scale)]
+
                 # Aggregate statistics
-                similarity_stats = position_group_df.groupby('Hamming Distance')['Similarity'].mean().reset_index()
+                stats = position_group_df.groupby('Hamming Distance').agg({
+                    'Similarity': ['mean', 'std'],
+                    'Euclidean Distance': ['mean', 'std']
+                }).reset_index()
+                stats.columns = ['Hamming Distance', 'Similarity Mean', 'Similarity Std', 'Euclidean Mean', 'Euclidean Std']
+
                 # Add trace
                 fig.add_trace(go.Scatter(
-                    x=similarity_stats['Hamming Distance'],
-                    y=similarity_stats['Similarity'],
-                    mode='lines+markers', 
-                    name=f"Target Word Position: {target_word_position.capitalize()}, Phrase Position: {entity_position.capitalize()}",
+                    x=stats['Hamming Distance'],
+                    y=stats['Similarity Mean'],
+                    mode='lines+markers',
+                    name=f"Target Word Position: {target_word_position}, Phrase Position: {entity_position}",
                     line=dict(color=color, dash=entity_styles[entity_position]),
-                    marker=dict(
-                        size=10,  
-                        color=color,  
-                        opacity=0.6  
+                    marker=dict(size=10, color=color, opacity=0.6),
+                    text=stats.apply(
+                        lambda row: f"Original Window: {original_window}<br>"
+                                    f"Hamming Distance: {row['Hamming Distance']}<br>"
+                                    f"Similarity: {row['Similarity Mean']:.4f} ± {row['Similarity Std']:.4f}<br>"
+                                    f"Euclidean Distance: {row['Euclidean Mean']:.4f} ± {row['Euclidean Std']:.4f}",
+                        axis=1
                     ),
-                    text=similarity_stats.apply(
-                        lambda row: f"Original Window: {original_window}<br>Hamming Distance: {row['Hamming Distance']}<br>Similarity: {row['Similarity']:.2f}",
-                        axis=1 
-                    ),
-                    hoverinfo='text'  
+                    hoverinfo='text'
                 ))
-    
+
     # Configure layout
     fig.update_layout(
         title=f"Combined Cosine Similarity by Hamming Distance\nOriginal Window: '{original_window}' - RPP: {mode}",
         xaxis_title="Hamming Distance",
         yaxis_title="Mean Cosine Similarity",
         yaxis=dict(
-            range=[0, 1], 
-            tickmode='array',  
-            tickvals=[i / 10 for i in range(11)], 
-            ticktext=[f"{i / 10:.1f}" for i in range(11)]  
+            range=[0, 1],
+            tickmode='array',
+            tickvals=[i / 10 for i in range(11)],
+            ticktext=[f"{i / 10:.1f}" for i in range(11)]
         ),
-        template="plotly_white",  
-        hovermode='closest', 
-        legend=dict(x=1.1, y=1),  
-        margin=dict(r=150, t=100, b=50, l=50),  
+        template="plotly_white",
+        hovermode='closest',
+        legend=dict(x=1.1, y=1),
+        margin=dict(r=150, t=100, b=50, l=50)
     )
-    
+
     # Update trace and interactivity settings
-    fig.update_traces(marker=dict(size=12), selector=dict(mode='markers'))  
-    fig.update_layout(
-        clickmode='event+select',
-    )
-    
+    fig.update_traces(marker=dict(size=12), selector=dict(mode='markers'))
+    fig.update_layout(clickmode='event+select')
+
     fig.show()
     return fig

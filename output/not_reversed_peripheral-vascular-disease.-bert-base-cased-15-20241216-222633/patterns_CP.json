@@ -1,0 +1,141 @@
+{
+    "peripheral vascular disease.": [
+        {
+            "original_window": "present illness includes renal failure, renal transplant, insulin dependent diabetes mellitus and",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "present illness includes renal failure, renal mellitus insulin dependent diabetes transplant, and",
+                    "present illness dependent renal failure, renal transplant, insulin includes diabetes mellitus and",
+                    "present transplant, includes renal failure, renal illness insulin dependent diabetes mellitus and",
+                    "present illness includes mellitus failure, renal transplant, insulin dependent diabetes renal and",
+                    "present illness insulin renal failure, renal transplant, includes dependent diabetes mellitus and",
+                    "present illness and renal failure, renal transplant, insulin dependent diabetes mellitus includes",
+                    "includes illness present renal failure, renal transplant, insulin dependent diabetes mellitus and",
+                    "present dependent includes renal failure, renal transplant, insulin illness diabetes mellitus and",
+                    "present renal includes illness failure, renal transplant, insulin dependent diabetes mellitus and",
+                    "present illness includes renal transplant, renal failure, insulin dependent diabetes mellitus and"
+                ],
+                "hd_3": [
+                    "present illness includes diabetes failure, renal transplant, renal dependent insulin mellitus and",
+                    "present failure, includes renal insulin renal transplant, illness dependent diabetes mellitus and",
+                    "present renal includes renal failure, and transplant, insulin dependent diabetes mellitus illness",
+                    "dependent illness includes present failure, renal transplant, insulin renal diabetes mellitus and",
+                    "transplant, illness includes renal failure, renal diabetes insulin dependent present mellitus and",
+                    "present transplant, includes renal failure, renal insulin illness dependent diabetes mellitus and",
+                    "present includes diabetes renal failure, renal transplant, insulin dependent illness mellitus and",
+                    "present illness insulin renal failure, renal transplant, diabetes dependent includes mellitus and",
+                    "present illness transplant, renal failure, renal dependent insulin includes diabetes mellitus and",
+                    "present illness includes renal failure, mellitus renal insulin dependent diabetes transplant, and"
+                ],
+                "hd_4": [
+                    "failure, dependent includes renal present renal transplant, insulin illness diabetes mellitus and",
+                    "present insulin includes renal failure, and transplant, renal dependent diabetes mellitus illness",
+                    "present illness includes renal failure, renal dependent insulin transplant, and mellitus diabetes",
+                    "present illness includes renal dependent and transplant, insulin failure, diabetes mellitus renal",
+                    "present illness diabetes renal failure, insulin transplant, renal dependent includes mellitus and",
+                    "present illness renal renal and includes transplant, insulin dependent diabetes mellitus failure,",
+                    "illness renal includes renal failure, dependent transplant, insulin present diabetes mellitus and",
+                    "present mellitus includes illness failure, renal transplant, renal dependent diabetes insulin and",
+                    "transplant, illness present renal failure, renal and insulin dependent diabetes mellitus includes",
+                    "mellitus illness present renal failure, renal transplant, insulin includes diabetes dependent and"
+                ],
+                "hd_5": [
+                    "present insulin includes illness renal renal failure, transplant, dependent diabetes mellitus and",
+                    "renal dependent includes failure, present renal transplant, insulin illness diabetes mellitus and",
+                    "dependent illness transplant, renal failure, renal mellitus insulin present diabetes includes and",
+                    "includes present dependent illness failure, renal transplant, insulin renal diabetes mellitus and",
+                    "insulin dependent includes renal failure, renal transplant, present and diabetes mellitus illness",
+                    "transplant, illness dependent renal failure, renal includes present insulin diabetes mellitus and",
+                    "present dependent renal and failure, renal transplant, insulin illness diabetes mellitus includes",
+                    "dependent present includes insulin failure, renal transplant, renal illness diabetes mellitus and",
+                    "present transplant, includes renal failure, dependent illness insulin diabetes renal mellitus and",
+                    "and illness includes present failure, mellitus transplant, insulin dependent diabetes renal renal"
+                ],
+                "hd_6": [
+                    "present diabetes includes renal mellitus renal illness insulin failure, transplant, dependent and",
+                    "present illness diabetes renal includes and transplant, failure, dependent renal mellitus insulin",
+                    "present illness failure, and renal includes transplant, renal dependent diabetes mellitus insulin",
+                    "present and includes renal failure, renal transplant, dependent mellitus insulin illness diabetes",
+                    "present renal dependent renal failure, includes transplant, insulin and diabetes illness mellitus",
+                    "present illness includes diabetes renal failure, renal insulin dependent and mellitus transplant,",
+                    "present dependent includes renal failure, and renal insulin illness transplant, mellitus diabetes",
+                    "present mellitus includes diabetes failure, transplant, illness insulin dependent renal renal and",
+                    "present illness includes renal and dependent failure, insulin transplant, renal mellitus diabetes",
+                    "insulin illness includes and renal renal transplant, mellitus dependent diabetes present failure,"
+                ],
+                "hd_7": [
+                    "present renal includes renal mellitus illness transplant, and dependent failure, insulin diabetes",
+                    "present illness includes dependent insulin renal mellitus transplant, failure, renal diabetes and",
+                    "present failure, mellitus illness insulin includes transplant, renal dependent diabetes renal and",
+                    "insulin mellitus includes failure, present renal transplant, diabetes dependent renal illness and",
+                    "present failure, illness renal mellitus renal and includes dependent diabetes insulin transplant,",
+                    "present renal includes and diabetes renal transplant, failure, dependent mellitus insulin illness",
+                    "present transplant, includes mellitus failure, renal dependent and illness diabetes insulin renal",
+                    "illness includes insulin renal and present transplant, renal dependent diabetes mellitus failure,",
+                    "diabetes illness present mellitus failure, renal insulin includes dependent transplant, renal and",
+                    "transplant, illness renal renal includes mellitus present insulin dependent failure, diabetes and"
+                ],
+                "hd_8": [
+                    "dependent includes illness renal failure, mellitus renal insulin transplant, present diabetes and",
+                    "diabetes mellitus renal illness renal includes transplant, insulin dependent present failure, and",
+                    "present renal includes and failure, illness transplant, diabetes insulin renal dependent mellitus",
+                    "renal transplant, insulin renal includes illness present mellitus dependent diabetes failure, and",
+                    "dependent failure, includes renal present and transplant, renal insulin illness mellitus diabetes",
+                    "includes illness failure, mellitus renal present transplant, dependent renal diabetes insulin and",
+                    "diabetes present and dependent failure, renal transplant, insulin includes renal illness mellitus",
+                    "present transplant, failure, renal insulin and includes mellitus dependent diabetes illness renal",
+                    "transplant, present includes renal failure, and mellitus insulin diabetes renal dependent illness",
+                    "present diabetes transplant, insulin and renal failure, includes dependent renal mellitus illness"
+                ],
+                "hd_9": [
+                    "diabetes illness includes renal mellitus present failure, renal and insulin transplant, dependent",
+                    "includes transplant, and diabetes renal illness failure, insulin dependent present mellitus renal",
+                    "includes mellitus insulin and illness renal renal present dependent diabetes transplant, failure,",
+                    "present diabetes transplant, and failure, mellitus dependent insulin includes renal renal illness",
+                    "present illness renal diabetes failure, insulin includes transplant, mellitus and renal dependent",
+                    "and diabetes includes insulin failure, renal present illness renal mellitus dependent transplant,",
+                    "present includes renal illness insulin failure, transplant, dependent and diabetes renal mellitus",
+                    "renal illness insulin renal diabetes mellitus transplant, dependent failure, present and includes",
+                    "and mellitus includes renal insulin failure, transplant, renal present dependent illness diabetes",
+                    "mellitus illness renal renal dependent failure, includes diabetes present transplant, insulin and"
+                ],
+                "hd_10": [
+                    "renal and diabetes illness transplant, includes dependent insulin failure, renal mellitus present",
+                    "insulin renal illness includes dependent failure, transplant, diabetes mellitus present renal and",
+                    "renal renal includes and failure, mellitus insulin present illness transplant, dependent diabetes",
+                    "and transplant, includes renal dependent mellitus diabetes present illness insulin renal failure,",
+                    "insulin failure, includes dependent renal and transplant, renal diabetes mellitus present illness",
+                    "dependent renal and mellitus illness failure, present insulin renal diabetes includes transplant,",
+                    "diabetes renal dependent transplant, failure, present renal illness insulin mellitus includes and",
+                    "includes insulin diabetes failure, mellitus renal renal and dependent present illness transplant,",
+                    "present renal transplant, insulin illness includes mellitus diabetes dependent and failure, renal",
+                    "illness dependent includes transplant, renal diabetes insulin mellitus failure, present renal and"
+                ],
+                "hd_11": [
+                    "transplant, present and illness renal includes failure, diabetes renal dependent mellitus insulin",
+                    "renal failure, diabetes present and includes dependent insulin transplant, illness renal mellitus",
+                    "dependent renal transplant, failure, illness diabetes renal mellitus present insulin includes and",
+                    "insulin renal and mellitus diabetes transplant, renal present dependent illness includes failure,",
+                    "includes renal transplant, and illness dependent mellitus renal present diabetes insulin failure,",
+                    "failure, includes transplant, renal present mellitus renal illness diabetes and dependent insulin",
+                    "present insulin failure, transplant, includes illness and dependent renal renal diabetes mellitus",
+                    "diabetes dependent includes present insulin transplant, renal failure, renal illness and mellitus",
+                    "dependent failure, insulin present illness diabetes mellitus renal transplant, includes renal and",
+                    "mellitus transplant, diabetes insulin dependent renal present renal and illness includes failure,"
+                ],
+                "hd_12": [
+                    "renal transplant, mellitus present and includes dependent illness failure, renal diabetes insulin",
+                    "insulin includes renal failure, mellitus illness and present transplant, renal diabetes dependent",
+                    "illness dependent transplant, and present diabetes mellitus includes renal insulin failure, renal",
+                    "insulin and renal dependent transplant, diabetes mellitus renal includes failure, present illness",
+                    "renal mellitus and illness includes dependent failure, transplant, insulin renal diabetes present",
+                    "illness failure, and transplant, mellitus diabetes renal renal insulin present dependent includes",
+                    "insulin present dependent includes illness failure, diabetes renal and renal transplant, mellitus",
+                    "diabetes and illness includes dependent mellitus failure, renal insulin present renal transplant,",
+                    "transplant, diabetes and present renal includes mellitus renal failure, illness dependent insulin",
+                    "and renal mellitus dependent illness transplant, diabetes renal insulin includes present failure,"
+                ]
+            }
+        }
+    ]
+}

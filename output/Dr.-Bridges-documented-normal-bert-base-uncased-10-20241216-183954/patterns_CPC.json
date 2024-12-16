@@ -1,0 +1,29 @@
+{
+    "Dr. Bridges documented normal": [
+        {
+            "original_window": "with heavy exertion. pedal pulses the",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "heavy with exertion. pedal pulses the",
+                    "pedal heavy exertion. with pulses the"
+                ],
+                "hd_3": [
+                    "with heavy pulses pedal the exertion.",
+                    "with heavy exertion. pulses the pedal"
+                ],
+                "hd_4": [
+                    "pulses the exertion. pedal with heavy",
+                    "with pulses the pedal exertion. heavy"
+                ],
+                "hd_5": [
+                    "the with exertion. pulses heavy pedal",
+                    "pedal with exertion. the heavy pulses"
+                ],
+                "hd_6": [
+                    "the pulses pedal exertion. with heavy",
+                    "pulses exertion. pedal the with heavy"
+                ]
+            }
+        }
+    ]
+}

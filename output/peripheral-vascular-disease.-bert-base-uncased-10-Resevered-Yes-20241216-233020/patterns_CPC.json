@@ -1,0 +1,29 @@
+{
+    "peripheral vascular disease.": [
+        {
+            "original_window": "diabetes mellitus and He recently had",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "diabetes mellitus He and recently had",
+                    "diabetes mellitus and had recently He",
+                    "diabetes mellitus recently He and had"
+                ],
+                "hd_3": [
+                    "He mellitus and recently diabetes had",
+                    "diabetes recently and He had mellitus",
+                    "recently mellitus diabetes He and had"
+                ],
+                "hd_4": [
+                    "diabetes mellitus He had and recently",
+                    "diabetes and He had recently mellitus",
+                    "and mellitus recently He had diabetes"
+                ],
+                "hd_5": [
+                    "mellitus had diabetes and recently He",
+                    "He and diabetes had recently mellitus",
+                    "and had He diabetes recently mellitus"
+                ]
+            }
+        }
+    ]
+}

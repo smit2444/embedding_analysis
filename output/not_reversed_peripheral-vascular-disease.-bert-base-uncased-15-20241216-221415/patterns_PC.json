@@ -1,0 +1,141 @@
+{
+    "peripheral vascular disease.": [
+        {
+            "original_window": "He recently had a deep venous thrombosis of the left leg extending",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "He the had a deep venous thrombosis of recently left leg extending",
+                    "He recently of a deep venous thrombosis had the left leg extending",
+                    "He recently leg a deep venous thrombosis of the left had extending",
+                    "He recently had a deep left thrombosis of the venous leg extending",
+                    "He recently had leg deep venous thrombosis of the left a extending",
+                    "thrombosis recently had a deep venous He of the left leg extending",
+                    "He recently had a deep thrombosis venous of the left leg extending",
+                    "recently He had a deep venous thrombosis of the left leg extending",
+                    "He recently thrombosis a deep venous had of the left leg extending",
+                    "He recently had a deep extending thrombosis of the left leg venous"
+                ],
+                "hd_3": [
+                    "left recently had a He venous thrombosis of the deep leg extending",
+                    "He recently had a deep venous thrombosis leg the of left extending",
+                    "He deep had a leg venous thrombosis of the left recently extending",
+                    "He recently venous a deep left thrombosis of the had leg extending",
+                    "He recently had a deep venous extending of thrombosis left leg the",
+                    "He recently had a the venous thrombosis of left deep leg extending",
+                    "He recently had a extending venous thrombosis of the left deep leg",
+                    "He recently had a deep the thrombosis of left venous leg extending",
+                    "He recently deep a leg venous thrombosis of the left had extending",
+                    "He recently had a deep left thrombosis of venous the leg extending"
+                ],
+                "hd_4": [
+                    "leg recently had a deep venous left of the He thrombosis extending",
+                    "had extending He a deep venous thrombosis of the left leg recently",
+                    "He leg had recently deep venous thrombosis of a left the extending",
+                    "He left leg a deep venous thrombosis of the recently had extending",
+                    "had He the a deep venous thrombosis of recently left leg extending",
+                    "He recently had a deep leg venous of thrombosis left the extending",
+                    "He recently had a leg venous thrombosis the deep left of extending",
+                    "left recently had a deep He thrombosis of the leg venous extending",
+                    "He recently a left deep venous thrombosis had the of leg extending",
+                    "He recently had thrombosis of venous deep a the left leg extending"
+                ],
+                "hd_5": [
+                    "He recently had thrombosis a leg venous of the left deep extending",
+                    "He recently leg a deep venous had of the extending left thrombosis",
+                    "had extending venous a deep He thrombosis of the left leg recently",
+                    "He recently had a venous left thrombosis of the deep extending leg",
+                    "of leg had a deep venous recently thrombosis the left He extending",
+                    "He deep left had a venous thrombosis of the recently leg extending",
+                    "recently a had left deep venous thrombosis He the of leg extending",
+                    "He recently had a of venous the deep extending left leg thrombosis",
+                    "He recently extending a of venous thrombosis had the left deep leg",
+                    "He recently a venous the had thrombosis of deep left leg extending"
+                ],
+                "hd_6": [
+                    "venous recently thrombosis He deep a left of the had leg extending",
+                    "extending left had a deep the thrombosis of venous He leg recently",
+                    "had leg left a deep venous thrombosis recently the of He extending",
+                    "He recently had thrombosis left deep a of the leg venous extending",
+                    "He extending had deep thrombosis venous the of recently left leg a",
+                    "He thrombosis left a leg venous had of the recently deep extending",
+                    "He extending venous a deep recently had of the thrombosis leg left",
+                    "He thrombosis had of deep extending recently a the left leg venous",
+                    "deep recently of a venous had thrombosis extending the left leg He",
+                    "He left had a deep venous thrombosis leg extending of the recently"
+                ],
+                "hd_7": [
+                    "a recently had of venous leg He deep the left thrombosis extending",
+                    "venous extending had a deep leg thrombosis of recently the He left",
+                    "He a had of deep venous recently left leg thrombosis the extending",
+                    "deep He had thrombosis extending venous recently of the a leg left",
+                    "deep of had a He venous the extending thrombosis left leg recently",
+                    "He the had recently deep venous extending left of a leg thrombosis",
+                    "He had leg a of recently thrombosis the venous left deep extending",
+                    "left deep had a of venous thrombosis the extending He leg recently",
+                    "a recently had thrombosis left venous of He the leg deep extending",
+                    "a recently had extending deep venous thrombosis He leg the left of"
+                ],
+                "hd_8": [
+                    "a extending had He deep leg thrombosis the of left recently venous",
+                    "had recently extending a He venous the left of thrombosis leg deep",
+                    "the venous He had of recently thrombosis a deep left leg extending",
+                    "left recently had a venous extending He the of deep leg thrombosis",
+                    "the a He of deep venous thrombosis extending left recently leg had",
+                    "extending deep the a recently He had of thrombosis left leg venous",
+                    "He deep the leg recently venous had thrombosis a left of extending",
+                    "He leg of thrombosis deep a had recently venous left the extending",
+                    "of recently left a venous extending thrombosis He deep had leg the",
+                    "He of had the recently a deep left venous thrombosis leg extending"
+                ],
+                "hd_9": [
+                    "a venous of left deep the thrombosis recently extending He leg had",
+                    "a the had of deep left thrombosis recently He leg extending venous",
+                    "He recently extending of deep leg venous a left thrombosis had the",
+                    "venous had thrombosis a recently leg of left the deep He extending",
+                    "He of the leg deep extending recently venous had left thrombosis a",
+                    "He thrombosis a the had of recently venous left deep leg extending",
+                    "He left thrombosis a the leg deep of extending recently venous had",
+                    "the recently venous leg extending had thrombosis of left deep a He",
+                    "He recently thrombosis left had of deep venous leg a the extending",
+                    "thrombosis left had extending recently venous leg of deep the a He"
+                ],
+                "hd_10": [
+                    "thrombosis had He a of the recently extending left deep leg venous",
+                    "extending the a thrombosis recently had leg of deep left venous He",
+                    "He leg had thrombosis extending deep venous a recently of left the",
+                    "the recently left leg venous a of deep He thrombosis had extending",
+                    "He left leg recently venous a thrombosis extending of had deep the",
+                    "of deep venous a extending He the had leg left thrombosis recently",
+                    "He of left thrombosis leg venous had a extending recently the deep",
+                    "the recently He deep of thrombosis left had extending a leg venous",
+                    "the left extending deep a recently thrombosis He venous had leg of",
+                    "left recently a the had thrombosis venous of deep leg extending He"
+                ],
+                "hd_11": [
+                    "deep leg He a had of left thrombosis extending the recently venous",
+                    "of deep left a recently the venous thrombosis leg He extending had",
+                    "had left a venous of deep leg recently He thrombosis the extending",
+                    "of recently a the left thrombosis extending deep leg venous had He",
+                    "the recently a venous had left He deep of extending thrombosis leg",
+                    "of deep venous a thrombosis left leg extending He had the recently",
+                    "He thrombosis venous had extending left the a leg of deep recently",
+                    "leg of venous a the He extending thrombosis deep recently left had",
+                    "a recently of had the extending He left leg thrombosis venous deep",
+                    "a deep of left venous had thrombosis extending leg the recently He"
+                ],
+                "hd_12": [
+                    "of left deep leg extending recently the He a had thrombosis venous",
+                    "deep the thrombosis He leg of left a venous extending had recently",
+                    "recently had left venous a the leg He thrombosis extending of deep",
+                    "extending a the thrombosis leg left recently had of deep venous He",
+                    "a venous left thrombosis the deep He recently had extending of leg",
+                    "venous He the left extending a had deep thrombosis leg of recently",
+                    "left thrombosis He recently of extending the venous leg had a deep",
+                    "a extending leg venous the thrombosis left He deep had of recently",
+                    "had thrombosis a recently He left venous the extending leg of deep",
+                    "the venous deep of leg extending a thrombosis He had recently left"
+                ]
+            }
+        }
+    ]
+}

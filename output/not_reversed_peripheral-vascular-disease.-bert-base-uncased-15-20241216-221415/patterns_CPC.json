@@ -1,0 +1,141 @@
+{
+    "peripheral vascular disease.": [
+        {
+            "original_window": "transplant, insulin dependent diabetes mellitus and He recently had a deep venous",
+            "patterns_by_hd": {
+                "hd_2": [
+                    "transplant, insulin dependent had mellitus and He recently diabetes a deep venous",
+                    "transplant, insulin dependent diabetes and mellitus He recently had a deep venous",
+                    "transplant, insulin dependent diabetes He and mellitus recently had a deep venous",
+                    "a insulin dependent diabetes mellitus and He recently had transplant, deep venous",
+                    "transplant, insulin dependent diabetes mellitus and a recently had He deep venous",
+                    "transplant, insulin dependent diabetes a and He recently had mellitus deep venous",
+                    "transplant, diabetes dependent insulin mellitus and He recently had a deep venous",
+                    "transplant, insulin dependent diabetes mellitus and He recently had a venous deep",
+                    "transplant, insulin and diabetes mellitus dependent He recently had a deep venous",
+                    "transplant, insulin dependent venous mellitus and He recently had a deep diabetes"
+                ],
+                "hd_3": [
+                    "had insulin dependent diabetes mellitus and He transplant, recently a deep venous",
+                    "transplant, insulin dependent and mellitus a He recently had diabetes deep venous",
+                    "had insulin dependent diabetes mellitus and He recently venous a deep transplant,",
+                    "transplant, insulin dependent diabetes mellitus had He recently venous a deep and",
+                    "transplant, and dependent diabetes mellitus venous He recently had a deep insulin",
+                    "transplant, He dependent insulin mellitus and diabetes recently had a deep venous",
+                    "venous insulin transplant, diabetes mellitus and He recently had a deep dependent",
+                    "transplant, dependent recently diabetes mellitus and He insulin had a deep venous",
+                    "transplant, had insulin diabetes mellitus and He recently dependent a deep venous",
+                    "transplant, insulin dependent mellitus He and diabetes recently had a deep venous"
+                ],
+                "hd_4": [
+                    "a transplant, insulin diabetes mellitus and He recently had dependent deep venous",
+                    "transplant, insulin dependent recently mellitus and deep diabetes had a He venous",
+                    "diabetes insulin dependent had mellitus and He transplant, recently a deep venous",
+                    "recently insulin dependent diabetes mellitus and a transplant, had He deep venous",
+                    "transplant, and insulin diabetes dependent mellitus He recently had a deep venous",
+                    "transplant, had recently diabetes mellitus and He dependent insulin a deep venous",
+                    "dependent insulin recently diabetes mellitus and He deep had a transplant, venous",
+                    "deep venous dependent diabetes mellitus and He recently had a insulin transplant,",
+                    "recently insulin He diabetes mellitus and transplant, dependent had a deep venous",
+                    "transplant, insulin a He mellitus and dependent recently had diabetes deep venous"
+                ],
+                "hd_5": [
+                    "transplant, insulin dependent had mellitus diabetes He venous and a deep recently",
+                    "transplant, recently dependent a mellitus and He venous had diabetes deep insulin",
+                    "transplant, diabetes mellitus venous insulin and He recently had a deep dependent",
+                    "transplant, insulin dependent He mellitus and venous recently a had deep diabetes",
+                    "transplant, dependent a diabetes mellitus recently He and had insulin deep venous",
+                    "transplant, insulin dependent diabetes a and He mellitus recently venous deep had",
+                    "transplant, He dependent diabetes mellitus and venous insulin had recently deep a",
+                    "transplant, and deep diabetes mellitus dependent He recently had insulin a venous",
+                    "transplant, and venous diabetes mellitus recently He dependent had a deep insulin",
+                    "dependent insulin had diabetes mellitus and deep recently transplant, a He venous"
+                ],
+                "hd_6": [
+                    "transplant, insulin dependent deep mellitus and a venous had He recently diabetes",
+                    "dependent insulin and diabetes deep had He recently mellitus a transplant, venous",
+                    "transplant, and dependent diabetes recently had He venous mellitus a deep insulin",
+                    "transplant, a dependent diabetes mellitus insulin He and recently deep had venous",
+                    "recently insulin had transplant, dependent and He mellitus diabetes a deep venous",
+                    "recently insulin and diabetes transplant, dependent He a had mellitus deep venous",
+                    "deep insulin recently dependent mellitus and He diabetes had a venous transplant,",
+                    "deep transplant, dependent diabetes mellitus and a He had recently insulin venous",
+                    "transplant, insulin had diabetes deep mellitus dependent recently He a and venous",
+                    "and transplant, venous diabetes mellitus a He recently had dependent deep insulin"
+                ],
+                "hd_7": [
+                    "He dependent deep diabetes mellitus a and recently had transplant, insulin venous",
+                    "recently insulin venous transplant, diabetes and He mellitus had a dependent deep",
+                    "transplant, insulin recently diabetes mellitus and dependent venous He deep a had",
+                    "transplant, insulin mellitus dependent diabetes deep He recently and a venous had",
+                    "transplant, recently diabetes had and mellitus He insulin dependent a deep venous",
+                    "deep had dependent and mellitus transplant, He recently venous a diabetes insulin",
+                    "dependent insulin a diabetes He had mellitus recently and transplant, deep venous",
+                    "transplant, insulin had a mellitus dependent diabetes and recently He deep venous",
+                    "deep mellitus dependent diabetes insulin had He transplant, recently a and venous",
+                    "deep insulin transplant, diabetes mellitus He and venous had a dependent recently"
+                ],
+                "hd_8": [
+                    "transplant, a insulin He mellitus dependent and deep had diabetes recently venous",
+                    "transplant, insulin dependent had and a deep mellitus He diabetes recently venous",
+                    "transplant, insulin and He a mellitus venous recently had dependent diabetes deep",
+                    "transplant, recently dependent mellitus He deep venous diabetes had a insulin and",
+                    "deep insulin dependent transplant, mellitus and a had He venous diabetes recently",
+                    "deep insulin dependent had mellitus recently diabetes He venous a and transplant,",
+                    "a deep dependent diabetes recently and He transplant, venous insulin had mellitus",
+                    "and He recently diabetes insulin dependent mellitus deep had a transplant, venous",
+                    "He insulin venous transplant, a and dependent recently had mellitus diabetes deep",
+                    "transplant, had and insulin deep mellitus He dependent recently a diabetes venous"
+                ],
+                "hd_9": [
+                    "deep transplant, dependent had He a mellitus recently insulin diabetes and venous",
+                    "transplant, dependent recently a insulin venous He and had deep mellitus diabetes",
+                    "dependent insulin a deep diabetes and venous recently mellitus had transplant, He",
+                    "transplant, He mellitus venous diabetes recently insulin and had dependent deep a",
+                    "transplant, recently a and deep insulin dependent mellitus had diabetes He venous",
+                    "mellitus insulin and diabetes recently had transplant, dependent a deep He venous",
+                    "venous insulin dependent diabetes He recently mellitus transplant, deep had a and",
+                    "insulin and dependent He mellitus transplant, recently venous diabetes had deep a",
+                    "recently venous transplant, dependent insulin and He mellitus had deep a diabetes",
+                    "transplant, insulin mellitus and had recently dependent He diabetes a venous deep"
+                ],
+                "hd_10": [
+                    "dependent He and mellitus deep had insulin recently transplant, a venous diabetes",
+                    "a recently insulin dependent deep diabetes He mellitus had venous transplant, and",
+                    "diabetes a and transplant, insulin dependent recently He mellitus had deep venous",
+                    "dependent recently diabetes insulin had and transplant, deep mellitus He a venous",
+                    "a insulin deep venous dependent diabetes transplant, mellitus had He and recently",
+                    "diabetes had dependent and venous insulin mellitus recently a deep transplant, He",
+                    "had deep transplant, He diabetes and a recently dependent venous insulin mellitus",
+                    "deep a insulin dependent transplant, mellitus He recently venous diabetes and had",
+                    "diabetes had dependent venous a transplant, deep recently insulin mellitus He and",
+                    "transplant, and dependent insulin diabetes recently mellitus a venous had He deep"
+                ],
+                "hd_11": [
+                    "and He recently insulin venous deep dependent had mellitus a diabetes transplant,",
+                    "dependent mellitus recently transplant, He a deep insulin and diabetes had venous",
+                    "diabetes had venous and recently dependent insulin He mellitus transplant, deep a",
+                    "mellitus venous recently and He a transplant, insulin had dependent diabetes deep",
+                    "transplant, deep diabetes recently dependent venous mellitus had He insulin a and",
+                    "a venous mellitus insulin deep diabetes He transplant, recently had dependent and",
+                    "mellitus venous diabetes dependent deep a insulin recently and He transplant, had",
+                    "deep He and recently venous had transplant, diabetes mellitus a dependent insulin",
+                    "venous mellitus had deep a dependent He diabetes insulin and recently transplant,",
+                    "venous recently dependent insulin and He mellitus a deep diabetes had transplant,"
+                ],
+                "hd_12": [
+                    "and a insulin deep He mellitus recently dependent venous transplant, diabetes had",
+                    "deep recently transplant, had insulin a venous He diabetes and dependent mellitus",
+                    "venous mellitus had insulin diabetes dependent and a deep recently transplant, He",
+                    "deep venous and dependent a diabetes insulin He recently transplant, mellitus had",
+                    "insulin venous recently He dependent a transplant, deep and had diabetes mellitus",
+                    "had transplant, mellitus He recently dependent deep a and diabetes venous insulin",
+                    "insulin dependent transplant, had a recently and deep venous diabetes He mellitus",
+                    "mellitus transplant, and He venous deep dependent a insulin had recently diabetes",
+                    "diabetes dependent a and insulin mellitus recently transplant, venous deep He had",
+                    "He mellitus venous deep a had diabetes insulin recently and dependent transplant,"
+                ]
+            }
+        }
+    ]
+}
